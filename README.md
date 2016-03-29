@@ -5,6 +5,7 @@ This project is used to create two Docker container; one to run the BCycle API a
 ## Setup
 
 To run project, you will need to have the following installed:
+
 1. Docker
 2. Docker-Compose
 3. GIT
@@ -20,11 +21,7 @@ was not successful, consult the [Docker Documentation](https://docs.docker.com/)
 To start the BCycle API and DB environment run: `docker-compose up` in the main directory. This may take some
 time as it downloads and builds each of the envirionments.
 
-## Docker BCycle API
-
-## Docker BCycle DB
-
-### Creators
+### Creator
 
 [Thomas Traylor](http://github.com/tstraylor)
 
