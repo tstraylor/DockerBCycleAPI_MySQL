@@ -1,5 +1,5 @@
-FROM node:5.9.0
-
+FROM node:8-alpine
+# https://hub.docker.com/_/node/
 # Install app dependencies
 COPY ./src /src
 # Install the node dependencies

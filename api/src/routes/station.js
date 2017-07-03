@@ -14,8 +14,8 @@ module.exports = (db) => {
     router.route('/station')
         .get(function(req, res) {
             console.log('GET /station');
-            if (req.query.start_lat === undefined && req.query.start_lon === undefined
-                && req.query.end_lat === undefined && req.query.end_lon === undefined) {
+            if (req.query.StartLat === undefined && req.query.StartLon === undefined
+                && req.query.EndLat === undefined && req.query.EndLon === undefined) {
 
                 console.log('no query values');
                 bcycle.getStations(function(rows, err) {
@@ -32,16 +32,16 @@ module.exports = (db) => {
             }
             else {
 
-                console.log('start_lat = ' + req.query.start_lat); 
-                console.log('start_lon = ' + req.query.start_lon); 
-                console.log('end_lat = ' + req.query.end_lat); 
-                console.log('end_lon = ' + req.query.end_lon); 
+                console.log('StartLat = ' + req.query.StartLat); 
+                console.log('StartLon = ' + req.query.StartLon); 
+                console.log('EndLat = ' + req.query.EndLat); 
+                console.log('EndLon = ' + req.query.EndLon); 
 
                 var params = [];
-                params.push(req.query.start_lat);
-                params.push(req.query.end_lat);
-                params.push(req.query.start_lon);
-                params.push(req.query.end_lon);
+                params.push(req.query.StartLat);
+                params.push(req.query.EndLat);
+                params.push(req.query.StartLon);
+                params.push(req.query.EndLon);
 
                 bcycle.getStationsInRegion(params, function(rows, err) {
                     if(err) {
